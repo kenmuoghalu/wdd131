@@ -48,6 +48,12 @@ footer {
     padding: 2rem;
     text-align: center;
     grid-column: 1 / 5;
+
+}
+
+#lastModified {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
 }
 
 main {
