@@ -1,0 +1,36 @@
+:root {
+    --dark-color: #0A090C;
+    --primary-color: #07393C;
+    --accent2: #2C666E;
+    --accent1: #90DDF0;
+    --background-color: #F0EDEE;
+}
+
+@media screen and (min-width: 500px) {
+    
+    nav{
+        background-color: var(--primary-color);
+    }
+    
+    .navigation {
+        display: flex;
+    }
+
+    .navigation a, .navigation li{
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+    
+    header {
+        background-color: var(--dark-color  );
+        color: white;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}

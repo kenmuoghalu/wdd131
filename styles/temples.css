@@ -1,0 +1,124 @@
+:root {
+    /* Fonts */
+    --heading-font: "Libre Baskerville", serif;
+    --heading-font-size: 2em;
+    --heading-font-weight: 700;
+    --body-font: "IBM Plex Sans", sans-serif;
+    --body-font-size: 16px;
+    --body-font-weight: 350;
+
+    /*Color
+      coolors link: https: //coolors.co/0a090c-f0edee-07393c-2c666e-90ddf0
+    */
+    --dark-color: #0A090C;
+    --primary-color: #07393C;
+    --accent2: #2C666E;
+    --accent1: #90DDF0;
+    --background-color: #F0EDEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    background-color: var(--background-color);
+    text-align: center;
+
+}
+
+header{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    margin-bottom: 1em;
+    background-color: var(--accent1);
+}
+
+h1{
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    font-size: var(--heading-font-size);
+    padding: 1em;
+}
+
+h2{
+    padding-bottom:1em;
+    font-size: 1.5em;
+}
+
+img{
+    width: 300px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color);
+    margin: 0 auto;
+    max-width: 100vw;
+    border-radius: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: none;
+    text-decoration: none;
+    color: #ffff;
+    text-align: center;
+    padding: 1rem;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+nav a:hover{
+    background-color: var(--accent2);
+}
+
+main{
+    max-width: 100vw;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/*for toggle event */
+.open a {
+    display: block;
+}
+
+footer{
+    background-color: var(--dark-color);
+    color: #ffff;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 0.6em;
+    justify-content: center;
+    align-content: center;
+}
