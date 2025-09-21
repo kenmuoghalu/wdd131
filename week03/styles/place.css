@@ -1,0 +1,144 @@
+:root {
+    /*Fonts*/
+    --font: "Poppins", sans-serif;
+
+    --heading-font-size: 2em;
+    --heading-font-weight: 900;
+
+    --subheading-font-size: 2em;
+    --subheading-font-weight: 400;
+    --subheading-font-style: italic;
+
+    --body-font-size: 16px;
+    --body-font-weight: 300;
+
+    /*Colors*/
+    --light-color: #d0dbd1;
+    --accent-color: #49a2b0;
+    --dark-color: #19240e;
+    --primary-color: #505629;
+}
+
+/*Mobile View*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font);
+    font-weight: var(--body-font-weight);
+    background-color: var(--light-color);
+}
+
+div {
+    background-color: var(--light-color);
+}
+
+#weather {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows:  auto auto 1fr;
+}
+
+#weather h2 {
+    grid-column: 1/4;
+}
+
+svg {
+    grid-column: 1/4;
+    align-self: center;
+    justify-self: center;
+    width: 80px;
+    height: auto;
+    padding: 1em;
+}
+
+#weather table{
+    grid-column: 1/4; 
+}
+
+tr,
+td {
+    padding: 0.5em;
+}
+
+tr td:first-child {
+    text-align: right;
+    font-weight: var(--subheading-font-weight);
+    font-style: var(--subheading-font-style);
+    grid-column: 1 / 2;
+}
+
+h1,
+h2 {
+    text-align: center;
+    padding: 0.6em;
+
+}
+
+h1 {
+    background-color: var(--primary-color);
+    color: #ffff;
+}
+
+h2 {
+    background-color: var(--dark-color);
+    color: #ffff;
+    font-size: var(--subheading-font-size);
+    font-weight: var(--subheading-font-weight);
+    border-radius: 0.6em;
+
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--dark-color);
+    color: #ffff;
+    padding: 1em;
+}
+
+/*Large View*/
+@media screen and (min-width: 1000px) {
+    .hero {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        border-radius: 1.5em;
+        background-color: rgb(255, 255, 255, 0.7);
+        padding: 1em;
+    }
+
+    #data {
+        top: 100px;
+        left: 20px;
+    }
+
+    #weather {
+        bottom: 8em;
+        right: 20px;
+        text-align: center;
+    }
+
+    #weather h2::after {
+        content: "🌧️" / "Light Rain";
+        margin-left: 1.3em;
+    }
+
+    h2:hover {
+        transform: scale(1.05);
+    }
+
+    svg{
+        display: none;
+    }
+
+}
