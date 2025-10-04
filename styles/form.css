@@ -1,0 +1,213 @@
+* {
+    margin: auto;
+    padding: 0;
+    max-width: 90vw;
+}
+
+body {
+    font-family: "Lora", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+footer {
+    margin-top: 1em;
+    text-align: center;
+    border-top: 1px solid #000;
+}
+
+#thanks {
+    padding: 0.5em;
+    margin: 1em;
+}
+
+header,
+footer {
+    background-color: #0E0E52;
+    color: #fff;
+    padding: 1em;
+}
+
+footer {
+    border-top: 8px solid #5dc4ffdc;
+    border-top-right-radius: 0.6em;
+    border-top-left-radius: 0.6em;
+}
+
+legend,
+h1,
+fieldset label,
+input[type="submit"] {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body main h1 {
+    font-style: italic;
+    background-color: #5dc4ff;
+    border-bottom: 8px solid #192ac294;
+    border-bottom-right-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+
+    padding: 0.5em;
+}
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    border-style: none;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+
+    align-self: center;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+
+select:required, input:required{
+    border-bottom: solid 5px red;
+}
+
+select:required:valid, input:required:valid{
+    border-bottom: solid 5px green;
+}
+
+#writ-review {
+    min-height: 100px;
+    width: 100vw;
+    text-indent: 10px;
+    border-radius: 0.6em;
+    border: 1px solid rgba(124, 124, 124, 0.671);
+    padding-top: 0.5em;
+
+    font-family: "Lora", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#prod-name,
+#name,
+#install-date {
+    min-height: 45px;
+    width: 100vw;
+    text-indent: 10px;
+
+    font-family: "Lora", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input[type="submit"] {
+    min-height: 45px;
+    width: 100vw;
+
+    border: 1px solid rgba(124, 124, 124, 0.671);
+
+    font-size: 30px;
+    padding: 0.5em;
+    border-radius: 0.6em;
+
+    font-style: italic;
+    background-color: #5dc4ff;
+    border-bottom: 8px solid #192ac294;
+    border-bottom-right-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #192ac2be;
+    border-bottom: 8px solid #5dc4ffdc;
+    color: #fff;
+    border-bottom-right-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+}
+
+.features div {
+    font-family: "Lora", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0.5em;
+}
+
+.features input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin: 0.5em;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: #449dd15e;
+    border-radius:  4em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars>label {
+    width: 30px;
+    height: 30px;
+    font-size: 45px;
+    transition: 0.2s ease;
+    color: #449DD1;
+}
+
+.stars label:hover {
+    color: #192ac2c9;
+    transition: 0.2s ease;
+}
+
+.stars label:active::before {
+    transform: scale(1.1);
+}
+
+.stars label::before {
+    content: '\2606';
+    position: absolute;
+    top: 25px;
+    line-height: 26px;
+}
+
+.stars input:checked~label:before {
+    content: '\2605';
+}
+
+/*larger screens*/
+@media screen and (min-width: 700px) {
+
+    * {
+        margin: auto;
+        padding: 0;
+        max-width: 60vw;
+    }
+}

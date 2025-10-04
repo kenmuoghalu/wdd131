@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WDD131 - W05 Product Review Form - Kenneth Muoghalu</title>
+    <meta name="description"
+        content="Kenneth Muoghal's Week 05 Assignment - Product Review Form for WDD 131 - Dynamic Web Fundamentals">
+    <meta name="author" content="Kenneth Muoghalu">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>W05 Assignment: Product Review Form</h1>
+    </header>
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html">
+
+            <!--Product Name-->
+            <fieldset>
+                <label>Product Name *
+                    <select name="prodName" id="prod-name" required>
+                        <option value="" selected disabled>Select a Product ... </option>
+                    </select>
+                </label>
+            </fieldset>
+
+
+            <!--Overall Rating-->
+            <fieldset>
+                <label>Overall Rating *</label>
+                <div class="stars">
+                    <input type="radio" name="rating" id="one-star" value="1" required>
+                    <label for="one-star"></label>
+
+                    <input type="radio" name="rating" id="two-star" value="2" required>
+                    <label for="two-star"></label>
+
+                    <input type="radio" name="rating" id="three-star" value="3" required>
+                    <label for="three-star"></label>
+
+                    <input type="radio" name="rating" id="four-star" value="4" required>
+                    <label for="four-star"></label>
+                    
+                    <input type="radio" name="rating" id="five-star" value="5" required>
+                    <label for="five-star"></label>
+                </div>
+            </fieldset>
+
+            <!--Date of installation-->
+            <fieldset>
+                <label>Date of Installation *<input type="date" name="installDate" id="install-date" required></label>
+            </fieldset>
+
+            <!--Features Feedback-->
+            <fieldset class="features">
+                <label>Which features did you find useful in the product?</label>
+                <div>(Check all that apply)</div>
+                    <label><input id="durability" type="checkbox" name="durability" value="durability">Durabitlity
+                    </label>
+                    <label><input id="ease" type="checkbox" name="ease" value="ease">Ease of Use</label>
+                    <label><input id="perf" type="checkbox" name="perf" value="performance">Performance</label>
+                    <label><input id="design" type="checkbox" name="design" value="design">Design</label>
+                
+            </fieldset>
+
+            <!--Written Review-->
+            <fieldset>
+                <label>Written Review (optional)
+                    <textarea name="writReview" id="writ-review" placeholder="Type your Review here..."></textarea>
+                </label>
+            </fieldset>
+
+
+            <!--Username-->
+            <fieldset>
+                <label>Your Name (optional)
+                    
+                    <input type="text" id="name" name="name" placeholder="Type your name here..."></label>
+            </fieldset>
+
+            <!--Post Review Button-->
+            <input type="submit" value="Post Review" id="rev-button">
+        </form>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            &#128059; Kenneth Muoghalu &#128059; Lagos, Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
