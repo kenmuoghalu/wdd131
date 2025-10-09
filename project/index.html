@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PNW Trailhead Guide - Home</title>
+    <meta name="description" content="Your guide to the best hiking trails in the Pacific Northwest">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PNW TRAILHEAD GUIDE</h1>
+            <button id="menu" aria-label="Navigation Menu"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="trails.html" title="Trails">Trails</a></li>
+                    <li><a href="gear.html" title="Gear">Gear</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/trail1.webp">
+                <img src="images/trail1.webp" alt="Scenic mountain trail in the Pacific Northwest" loading="lazy">
+            </picture>
+            <div class="hero-text">
+                <h2>Discover the Pacific Northwest's Best Hikes</h2>
+                <p>Your comprehensive guide to trails, gear, and adventure</p>
+            </div>
+        </section>
+        
+        <section class="featured-trail">
+            <h2>Trail of the Month</h2>
+            <div class="trail-card">
+                <img src="images/trail2.webp" alt="Mount Si trail" loading="lazy">
+                <div class="trail-info">
+                    <h3>Mount Si</h3>
+                    <p><strong>Location:</strong> North Bend, WA</p>
+                    <p><strong>Difficulty:</strong> Difficult</p>
+                    <p><strong>Length:</strong> 8 miles round trip</p>
+                    <p><strong>Elevation Gain:</strong> 3,150 feet</p>
+                    <p>One of the most popular hikes in Washington, Mount Si offers a challenging climb with rewarding views of the Snoqualmie Valley and Seattle skyline on clear days.</p>
+                    <a href="trails.html#mount-si" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="quick-links">
+            <h2>Explore More</h2>
+            <div class="link-cards">
+                <div class="link-card">
+                    <h3>Trail Guides</h3>
+                    <p>Find detailed information on Pacific Northwest trails</p>
+                    <a href="trails.html" class="btn">View Trails</a>
+                </div>
+                <div class="link-card">
+                    <h3>Gear Checklist</h3>
+                    <p>Create a customized packing list for your next hike</p>
+                    <a href="gear.html" class="btn">Plan Your Gear</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Sign up for our newsletter to receive trail updates and hiking tips</p>
+            <form id="newsletter-form">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> PNW Trailhead Guide | Kenneth Muoghalu</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,451 @@
+:root {
+    /* Colors */
+    --primary-color: #2E5E4E;
+    --secondary-color: #4A7C59;
+    --accent-color: #8FBC8F;
+    --text-color: #333333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    
+    /* Fonts */
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+    
+    /* Spacing */
+    --section-padding: 2rem;
+    --card-padding: 1.5rem;
+    --border-radius: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Navigation */
+#menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-padding);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 3rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: var(--white);
+    padding: 2rem;
+}
+
+.hero-text h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Section Headers */
+.page-header,
+.featured-trail h2,
+.quick-links h2,
+.newsletter h2,
+.difficulty-filter h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Cards */
+.trail-card,
+.link-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trail-card:hover,
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.trail-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.trail-info,
+.link-card {
+    padding: var(--card-padding);
+}
+
+.trail-info h3,
+.link-card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Difficulty Badges */
+.difficulty {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.difficulty.easy {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.difficulty.moderate {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.difficulty.difficult {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Trail Features */
+.trail-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.feature {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Link Cards */
+.link-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.link-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Newsletter Form */
+.newsletter {
+    background-color: var(--white);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 3rem;
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#newsletter-form label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#newsletter-form input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: var(--body-font);
+}
+
+#newsletter-form button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newsletter-form button:hover {
+    background-color: var(--primary-color);
+}
+
+#form-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+}
+
+#form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Placeholder Text */
+.placeholder {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    #menu {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .navigation.open {
+        display: flex;
+    }
+    
+    .navigation li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .navigation a {
+        display: block;
+        padding: 1rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
+    }
+}
+
+@media (min-width: 769px) {
+    .featured-trail .trail-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .link-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #newsletter-form {
+        flex-direction: row;
+        align-items: end;
+    }
+    
+    #newsletter-form label {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .trails-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+    }
+}

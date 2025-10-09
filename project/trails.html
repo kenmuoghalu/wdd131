@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PNW Trailhead Guide - Trails</title>
+    <meta name="description" content="Explore the best hiking trails in the Pacific Northwest">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts/trails.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PNW TRAILHEAD GUIDE</h1>
+            <button id="menu" aria-label="Navigation Menu"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="trails.html" title="Trails">Trails</a></li>
+                    <li><a href="gear.html" title="Gear">Gear</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <h1>Trail Guides</h1>
+            <p>Explore our curated selection of Pacific Northwest hiking trails</p>
+        </section>
+        
+        <section class="difficulty-filter">
+            <h2>Filter by Difficulty</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-difficulty="all">All Trails</button>
+                <button class="filter-btn" data-difficulty="easy">Easy</button>
+                <button class="filter-btn" data-difficulty="moderate">Moderate</button>
+                <button class="filter-btn" data-difficulty="difficult">Difficult</button>
+            </div>
+        </section>
+        
+        <section class="trails-gallery">
+            <div class="trail-card" data-difficulty="moderate" id="rattlesnake-ledge">
+                <img src="images/trail3.webp" alt="Rattlesnake Ledge trail" loading="lazy">
+                <div class="trail-info">
+                    <h3>Rattlesnake Ledge</h3>
+                    <p class="difficulty moderate">Moderate</p>
+                    <p><strong>Location:</strong> North Bend, WA</p>
+                    <p><strong>Length:</strong> 4 miles round trip</p>
+                    <p><strong>Elevation Gain:</strong> 1,160 feet</p>
+                    <p>This popular hike offers stunning views of Rattlesnake Lake and the surrounding mountains. The trail is well-maintained but can be crowded on weekends.</p>
+                    <div class="trail-features">
+                        <span class="feature">Lake Views</span>
+                        <span class="feature">Forest</span>
+                        <span class="feature">Well-Maintained</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trail-card" data-difficulty="difficult" id="mount-si">
+                <img src="images/trail2.webp" alt="Mount Si trail" loading="lazy">
+                <div class="trail-info">
+                    <h3>Mount Si</h3>
+                    <p class="difficulty difficult">Difficult</p>
+                    <p><strong>Location:</strong> North Bend, WA</p>
+                    <p><strong>Length:</strong> 8 miles round trip</p>
+                    <p><strong>Elevation Gain:</strong> 3,150 feet</p>
+                    <p>A classic Washington hike that rewards with panoramic views of the Snoqualmie Valley. The trail is steep and rocky in sections, requiring good fitness.</p>
+                    <div class="trail-features">
+                        <span class="feature">Summit Views</span>
+                        <span class="feature">Challenging</span>
+                        <span class="feature">Wildlife</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trail-card" data-difficulty="easy" id="franklin-falls">
+                <img src="images/trail4.webp" alt="Franklin Falls trail" loading="lazy">
+                <div class="trail-info">
+                    <h3>Franklin Falls</h3>
+                    <p class="difficulty easy">Easy</p>
+                    <p><strong>Location:</strong> Snoqualmie Pass, WA</p>
+                    <p><strong>Length:</strong> 2 miles round trip</p>
+                    <p><strong>Elevation Gain:</strong> 400 feet</p>
+                    <p>A family-friendly hike to a beautiful 70-foot waterfall. The trail follows the South Fork Snoqualmie River and is accessible for most skill levels.</p>
+                    <div class="trail-features">
+                        <span class="feature">Waterfall</span>
+                        <span class="feature">Family-Friendly</span>
+                        <span class="feature">River</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trail-card" data-difficulty="moderate" id="lake-22">
+                <img src="images/trail5.webp" alt="Lake 22 trail" loading="lazy">
+                <div class="trail-info">
+                    <h3>Lake 22</h3>
+                    <p class="difficulty moderate">Moderate</p>
+                    <p><strong>Location:</strong> Granite Falls, WA</p>
+                    <p><strong>Length:</strong> 5.4 miles round trip</p>
+                    <p><strong>Elevation Gain:</strong> 1,350 feet</p>
+                    <p>This trail takes you through old-growth forest to a stunning alpine lake surrounded by peaks. The trail includes boardwalks and rocky sections.</p>
+                    <div class="trail-features">
+                        <span class="feature">Alpine Lake</span>
+                        <span class="feature">Old Growth Forest</span>
+                        <span class="feature">Mountain Views</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trail-card" data-difficulty="difficult" id="mailbox-peak">
+                <img src="images/trail6.webp" alt="Mailbox Peak trail" loading="lazy">
+                <div class="trail-info">
+                    <h3>Mailbox Peak</h3>
+                    <p class="difficulty difficult">Difficult</p>
+                    <p><strong>Location:</strong> North Bend, WA</p>
+                    <p><strong>Length:</strong> 9.4 miles round trip (New Trail)</p>
+                    <p><strong>Elevation Gain:</strong> 4,000 feet</p>
+                    <p>A legendary hike known for its steep ascent and the iconic mailbox at the summit. The new trail is longer but less steep than the old route.</p>
+                    <div class="trail-features">
+                        <span class="feature">Summit Views</span>
+                        <span class="feature">Iconic Mailbox</span>
+                        <span class="feature">Very Steep</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> PNW Trailhead Guide | Kenneth Muoghalu</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

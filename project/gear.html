@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PNW Trailhead Guide - Gear Checklist</title>
+    <meta name="description" content="Create a customized hiking gear checklist for your next adventure">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/gear.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts/gear.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PNW TRAILHEAD GUIDE</h1>
+            <button id="menu" aria-label="Navigation Menu"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="trails.html" title="Trails">Trails</a></li>
+                    <li><a href="gear.html" title="Gear">Gear</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <h1>Gear Checklist Generator</h1>
+            <p>Create a customized packing list for your next hiking adventure</p>
+        </section>
+        
+        <section class="gear-form">
+            <h2>Customize Your Checklist</h2>
+            <form id="gear-form">
+                <div class="form-group">
+                    <label for="hike-type">Hike Type:</label>
+                    <select id="hike-type" name="hike-type" required>
+                        <option value="">Select hike type</option>
+                        <option value="day">Day Hike</option>
+                        <option value="overnight">Overnight Backpacking</option>
+                        <option value="multi-day">Multi-Day Trek</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="season">Season:</label>
+                    <select id="season" name="season" required>
+                        <option value="">Select season</option>
+                        <option value="spring">Spring</option>
+                        <option value="summer">Summer</option>
+                        <option value="fall">Fall</option>
+                        <option value="winter">Winter</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="difficulty">Trail Difficulty:</label>
+                    <select id="difficulty" name="difficulty" required>
+                        <option value="">Select difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="difficult">Difficult</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="weather">Expected Weather:</label>
+                    <select id="weather" name="weather" required>
+                        <option value="">Select weather</option>
+                        <option value="sunny">Sunny/Clear</option>
+                        <option value="mixed">Mixed/Changeable</option>
+                        <option value="rainy">Rainy/Wet</option>
+                        <option value="cold">Cold/Snowy</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="generate-btn">Generate Checklist</button>
+            </form>
+        </section>
+        
+        <section class="checklist-section">
+            <h2>Your Hiking Checklist</h2>
+            <div id="checklist-container">
+                <p class="placeholder">Your customized checklist will appear here after you fill out the form above.</p>
+            </div>
+            <div class="checklist-actions">
+                <button id="save-checklist" class="btn-secondary">Save Checklist</button>
+                <button id="clear-checklist" class="btn-secondary">Clear Checklist</button>
+                <button id="print-checklist" class="btn-secondary">Print Checklist</button>
+            </div>
+        </section>
+        
+        <section class="saved-checklists">
+            <h2>Saved Checklists</h2>
+            <div id="saved-lists-container">
+                <p class="placeholder">No saved checklists yet. Generate and save a checklist to see it here.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> PNW Trailhead Guide | Kenneth Muoghalu</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
